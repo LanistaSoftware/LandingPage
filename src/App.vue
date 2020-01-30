@@ -72,18 +72,24 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 export default {
-  name: 'app',
-  components: {},
-  data() {
-    return{
-      date: new Date(),
-      seconds:''
-    }
-  },
-  methods: {
 
-  },
-}
+            name: 'app',
+
+            data() {
+              return {
+               date: new Date(),
+              }
+            },
+            methods: {
+           lale:function(){
+             // eslint-disable-next-line no-unused-vars
+             let lale='lale'
+             // eslint-disable-next-line no-console
+             console.log(lale)
+           }
+            },
+          }
+
 </script>
 
 <style lang="less">
