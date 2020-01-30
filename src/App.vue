@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header>
-
       <div class="overlay"></div>
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
         <source src="./assets/mp4/bg.mp4" type="video/mp4">
@@ -14,16 +13,23 @@
           </a>
           <ul class="footer-icons text-center">
             <h5 class="text-light">Bizi takip et!</h5>
-
-					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-facebook-f"></i></div></a></li>
-					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-twitter"></i></div></a></li>
-					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-linkedin"></i></div></a></li>
-					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-instagram"></i></div></a></li>
-					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-pinterest"></i></div></a></li>
-
-				</ul>
+            <li><a href="#">
+                <div class="social border border-secondary"><i class="fab fa-facebook-f"></i></div>
+              </a></li>
+            <li><a href="#">
+                <div class="social border border-secondary"><i class="fab fa-twitter"></i></div>
+              </a></li>
+            <li><a href="#">
+                <div class="social border border-secondary"><i class="fab fa-linkedin"></i></div>
+              </a></li>
+            <li><a href="#">
+                <div class="social border border-secondary"><i class="fab fa-instagram"></i></div>
+              </a></li>
+            <li><a href="#">
+                <div class="social border border-secondary"><i class="fab fa-pinterest"></i></div>
+              </a></li>
+          </ul>
         </nav>
-   
         <div class="row">
           <div class="col-6 mt-5 border border-secondary ">
             <h3 class="pl-3 pt-4">İletişime geç.</h3>
@@ -50,35 +56,42 @@
           </div>
           <div class="col-6 mt-5">
             <div class="cronos">
-              <h2 class="heading">Projelerimizi, heyecanımızı ve daha fazlasını sizinle paylaşabilmek için çok çalışıyoruz.</h2>
+              <h2 class="heading">Projelerimizi, heyecanımızı ve daha fazlasını sizinle paylaşabilmek için çok
+                çalışıyoruz.</h2>
               <hr class="border border-secondary mt-5">
-              <h1 class="text-warning pt-2"> 30:20:45:<span class="second">12</span> </h1>
+              <h1 class="text-warning pt-2"> {{date.getDate()}}:{{date.getHours()}}:{{date.getMinutes()}}:<span class="second">{{date.getSeconds()}}</span></h1>
+              
             </div>
           </div>
         </div>
-
       </div>
-
     </header>
-
-  </div>
+    </div>
   </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-  }
+  components: {},
+  data() {
+    return{
+      date: new Date(),
+      seconds:''
+    }
+  },
+  methods: {
+
+  },
 }
 </script>
 
 <style lang="less">
-body{
+body {
   font-family: 'Josefin Sans', sans-serif;
-  color:#FFC107;
+  color: #FFC107;
 }
+
 header {
   position: relative;
   background-color: black;
@@ -87,6 +100,7 @@ header {
   width: 100%;
   overflow: hidden;
 }
+
 header video {
   position: absolute;
   top: 50%;
@@ -101,22 +115,27 @@ header video {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-input, select, textarea{
-    color: white !important;
+
+input,
+select,
+textarea {
+  color: white !important;
 }
 
-textarea:focus, input:focus {
-    color: white !important;
-}
-input,textarea
-{
-    background: transparent !important;
-
-    color:white;
+textarea:focus,
+input:focus {
+  color: white !important;
 }
 
+input,
+textarea {
+  background: transparent !important;
 
- .container {
+  color: white;
+}
+
+
+.container {
   position: relative;
   z-index: 2;
 }
@@ -127,54 +146,67 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color:rgb(58, 55, 55);
+  background-color: rgb(58, 55, 55);
   opacity: 0.5;
   z-index: 1;
 }
-image{
+
+image {
   widows: 150px;
 }
-h4{
-font-size:21px;
-font-family: 'Martel', serif;
+
+h4 {
+  font-size: 21px;
+  font-family: 'Martel', serif;
 }
-.cronos{
-  
+
+.cronos {
+
   text-align: center;
-  h1{
-  font-size: 72px;
+
+  h1 {
+    font-size: 72px;
   }
-  h2{
+
+  h2 {
     font-family: 'Martel', serif;
-    color:white;
+    color: white;
   }
 }
-.btn-container{
+
+.btn-container {
   text-align: right;
 }
-.altlogo{
-  color:#AC1958;
+
+.altlogo {
+  color: #AC1958;
 }
-.second{
-  color:#AC1958;
+
+.second {
+  color: #AC1958;
 }
-.social{
-  width: 50px;
-  
+
+.social {
+  width: 40px;
+  height: 40px;
+
 }
-li,ul{
+
+li,
+ul {
   list-style: none;
 }
-li{
+
+li {
 
   float: left;
   padding: 2px;
 }
-i{
-  font-size: 3  0px;
-  color:#FFC107;
-  padding:10px;
-}
 
+i {
+  font-size: 3 0px;
+  color: #FFC107;
+  padding: 10px;
+}
 
 </style>
