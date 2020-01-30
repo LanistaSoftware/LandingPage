@@ -10,40 +10,55 @@
         <nav class="navbar mt-3">
           <a class="navbar-brand" href="#">
             <img src="../src/assets/img/beyaz.png" width="150" alt="">
+            <h5 class="altlogo pt-3">Think. Create. Develop</h5>
           </a>
+          <ul class="footer-icons text-center">
+            <h5 class="text-light">Bizi takip et!</h5>
+
+					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-facebook-f"></i></div></a></li>
+					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-twitter"></i></div></a></li>
+					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-linkedin"></i></div></a></li>
+					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-instagram"></i></div></a></li>
+					<li><a href="#"><div class="social border border-secondary"><i class="fab fa-pinterest"></i></div></a></li>
+
+				</ul>
         </nav>
    
         <div class="row">
           <div class="col-6 mt-5 border border-secondary ">
-            <h4 class="text-secondary p-3">Projelerimizi, heyecanımızı ve daha fazlasını sizinle paylaşabilmek için çok çalışıyoruz.</h4>
-            <form class="p-3 text-light">
+            <h3 class="pl-3 pt-4">İletişime geç.</h3>
+            <h4 class="text-light pl-3 pt-4">Heyecanımıza ortak olmak için bizimle iletişime geçin.</h4>
+            <form class="p-3 text-warning">
               <div class="form-group tex">
-                <label for="exampleInputEmail1">Ad Soyad</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="Enter email">
+                <label for="inputName">Ad Soyad</label>
+                <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp"
+                  placeholder="İsim ve Soyisim giriniz.">
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="Enter email">
+                <label for="inputEmail">Email adresinizi giriniz.</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                  placeholder="Enter adresinizi giriniz.">
               </div>
               <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="messageBox">Mesajınızı bırakabilirsiniz.</label>
+                <textarea class="form-control" id="messageBox" rows="3" placeholder="Mesajınızı giriniz."></textarea>
               </div>
               <div class="btn-container">
-                <button type="submit" class="btn btn-lg btn-warning">Submit</button>
+                <button type="submit" class="btn btn-lg btn-warning text-light">Gönder</button>
               </div>
             </form>
           </div>
           <div class="col-6 mt-5">
             <div class="cronos">
-              <h1 class="text-warning"> 30:20:45:<span class="text-dark">12</span> </h1>
+              <h2 class="heading">Projelerimizi, heyecanımızı ve daha fazlasını sizinle paylaşabilmek için çok çalışıyoruz.</h2>
+              <hr class="border border-secondary mt-5">
+              <h1 class="text-warning pt-2"> 30:20:45:<span class="second">12</span> </h1>
             </div>
           </div>
         </div>
 
       </div>
+
     </header>
 
   </div>
@@ -61,7 +76,8 @@ export default {
 
 <style lang="less">
 body{
-  color:bisque;
+  font-family: 'Josefin Sans', sans-serif;
+  color:#FFC107;
 }
 header {
   position: relative;
@@ -85,6 +101,20 @@ header video {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
+input, select, textarea{
+    color: white !important;
+}
+
+textarea:focus, input:focus {
+    color: white !important;
+}
+input,textarea
+{
+    background: transparent !important;
+
+    color:white;
+}
+
 
  .container {
   position: relative;
@@ -105,18 +135,45 @@ image{
   widows: 150px;
 }
 h4{
-  text-shadow: 1px white;
-  border: solid 1px white;
+font-size:21px;
+font-family: 'Martel', serif;
 }
 .cronos{
-  margin-top:20%;
+  
   text-align: center;
   h1{
   font-size: 72px;
   }
+  h2{
+    font-family: 'Martel', serif;
+    color:white;
+  }
 }
 .btn-container{
   text-align: right;
+}
+.altlogo{
+  color:#AC1958;
+}
+.second{
+  color:#AC1958;
+}
+.social{
+  width: 50px;
+  
+}
+li,ul{
+  list-style: none;
+}
+li{
+
+  float: left;
+  padding: 2px;
+}
+i{
+  font-size: 3  0px;
+  color:#FFC107;
+  padding:10px;
 }
 
 
